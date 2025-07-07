@@ -4,45 +4,29 @@
   <meta charset="utf-8">
   <title>Decap CMS OAuth Redirect</title>
   <script>
-    /**
-     * This script is a very simple implementation of the OAuth redirect logic.
-     * It's designed to run in the popup window.
-     *
-     * 1. If the URL has a '#' (fragment), it means we're coming back from GitHub with a token.
-     * The script sends this token back to the main window and closes itself.
-     *
-     * 2. If the URL has a '?' (search), it means the main window has sent us here to
-     * redirect to the GitHub login page. The script does that redirect.
-     *
-     * 3. If the URL has neither, it's the very first time the popup is opened.
-     * The script sends a message to the main window to say "I'm ready".
-     */
     (function() {
       const fragment = (document.location.hash || '').replace(/^#/, '');
       const search = (document.location.search || '').replace(/^\?/, '');
 
       if (fragment) {
-        // We have a token, so we're logging in.
-        // Send the token to the parent window.
-        window.opener.postMessage('authorization:github:success:' + JSON.stringify({
-          token: fragment.split('=')[1].split('&')[0],
-          provider: 'github'
-        }), document.location.origin);
+        if (window.opener) {
+          window.opener.postMessage('authorization:github:success:' + JSON.stringify({
+            token: fragment.split('=')[1].split('&')[0],
+            provider: 'github'
+          }), document.location.origin);
+        }
       } else if (search) {
-        // We're being redirected to the provider.
-        // Redirect to the actual GitHub authorization page.
         document.location.assign(
           'https://github.com/login/oauth/authorize?' + search
         );
       } else {
-        // This is the initial entry point.
-        // Tell the parent window we are ready to authorize.
-        window.opener.postMessage('authorizing:github', document.location.origin);
+        if (window.opener) {
+          window.opener.postMessage('authorizing:github', document.location.origin);
+        }
       }
     })();
   </script>
 </head>
 <body>
-  <!-- This page is intentionally blank. The script does all the work. -->
 </body>
 </html>
