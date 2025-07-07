@@ -5,8 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>SBS Bauservice - Content Manager</title>
-  <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+
+  <!-- 
+    KORREKTUR: Dieser Link teilt dem CMS explizit mit, wo die Konfigurationsdatei 
+    zu finden ist. Dies behebt den Fehler "Failed to load config.yml".
+  -->
+  <link href="config.yml" type="text/yaml" rel="cms-config-url">
 </head>
 <body>
+  <!-- 
+    KORREKTUR: Das Skript wird an das Ende des Body verschoben.
+    Dadurch wird sichergestellt, dass die Seite vollständig geladen ist,
+    bevor das CMS versucht, die Login-Seite aufzubauen.
+    Dies behebt den "appendChild"-Fehler.
+  -->
+  <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
 </body>
 </html>
