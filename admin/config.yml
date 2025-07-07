@@ -3,7 +3,7 @@ backend:
   repo: briantemedia/sshekho-bauservice-website
   branch: main
   base_url: https://bright-mandazi-d47aa5.netlify.app
-  auth_endpoint: admin/
+  auth_endpoint: admin/netlify-oauth.html
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
