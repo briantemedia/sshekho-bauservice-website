@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>OAuth Callback</title>
+</head>
+<body>
+  <script>
+    // OAuth callback handler
+    (function() {
+      function receiveMessage(e) {
+        console.log("receiveMessage", e);
+        if (e.origin !== "http://shekho-bauservice.de") return;
+        
+        if (e.data.indexOf("authorization:github:success:") === 0) {
+          var data = JSON.parse(e.data.match(/:([^:]+)$/)[1]);
+          window.opener.postMessage(
+            "authorization:github:success:" + JSON.stringify(data),
+            e.origin
+          );
+          window.close();
+        }
+      }
+      window.addEventListener("message", receiveMessage, false);
+      window.opener.postMessage("authorizing:github", "*");
+    })();
+  </script>
+</body>
+</html>

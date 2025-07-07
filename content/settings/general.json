@@ -1,15 +1,7 @@
 {
   "company_name": "SBS Shekho Bauservice GmbH",
   "logo": "/images/SBS-Logo.svg",
-  "favicon": "/images/favicon.ico",
-  "contact": {
-    "address": "Musterstraße 123, 97070 Würzburg",
-    "phone": "+49 123 456 7890",
-    "email": "info@sbs-bauservice.de"
-  },
-  "social": {
-    "facebook": "https://facebook.com/sbsbauservice",
-    "instagram": "https://instagram.com/sbsbauservice",
-    "linkedin": "https://linkedin.com/company/sbsbauservice"
-  }
+  "address": "Musterstraße 123, 97070 Würzburg",
+  "phone": "+49 123 456 7890",
+  "email": "info@sbs-bauservice.de"
 }
