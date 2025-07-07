@@ -1,3 +1,4 @@
+# Backend-Konfiguration für die Verbindung zu GitHub mit Netlify als Helfer
 backend:
   name: github
   repo: briantemedia/sshekho-bauservice-website
@@ -5,11 +6,12 @@ backend:
   base_url: https://bright-mandazi-d47aa5.netlify.app
   auth_endpoint: /admin/netlify-oauth.html
 
+# Konfiguration für Medien-Uploads
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
+# Definition der bearbeitbaren Inhalte (Collections)
 collections:
-  # Projekte Collection
   - name: "projekte"
     label: "Projekte"
     folder: "content/projekte"
@@ -26,7 +28,6 @@ collections:
       - {label: "Reihenfolge", name: "order", widget: "number", default: 0}
       - {label: "Veröffentlicht", name: "published", widget: "boolean", default: true}
 
-  # Leistungen Collection
   - name: "leistungen"
     label: "Leistungen"
     folder: "content/leistungen"
@@ -40,7 +41,6 @@ collections:
       - {label: "Services", name: "services", widget: "list", field: {label: "Service", name: "service", widget: "string"}}
       - {label: "Reihenfolge", name: "order", widget: "number", default: 0}
 
-  # Seiten
   - name: "pages"
     label: "Seiten"
     files:
@@ -51,7 +51,6 @@ collections:
           - {label: "Hero Titel", name: "hero_title", widget: "string"}
           - {label: "Hero Untertitel", name: "hero_subtitle", widget: "text"}
           - {label: "Über Uns Text", name: "about_text", widget: "markdown"}
-      
       - name: "ueber-uns"
         label: "Über Uns"
         file: "content/pages/ueber-uns.md"
@@ -60,7 +59,6 @@ collections:
           - {label: "Seiten Beschreibung", name: "page_description", widget: "text"}
           - {label: "Mission Titel", name: "mission_title", widget: "string"}
           - {label: "Mission Text", name: "mission_text", widget: "markdown"}
-      
       - name: "kontakt"
         label: "Kontakt"
         file: "content/pages/kontakt.md"
@@ -69,7 +67,6 @@ collections:
           - {label: "Telefon", name: "phone", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
 
-  # Einstellungen
   - name: "settings"
     label: "Einstellungen"
     files:
