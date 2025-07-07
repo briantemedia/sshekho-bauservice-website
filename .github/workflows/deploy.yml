@@ -18,7 +18,7 @@ jobs:
         server: w020748e.kasserver.com
         username: w020748e
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /
+        server-dir: /shekho-bauservice.de/
         exclude: |
           **/.git*
           **/.git*/**
