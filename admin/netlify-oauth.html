@@ -9,6 +9,7 @@
       const search = (document.location.search || '').replace(/^\?/, '');
 
       if (fragment) {
+        // Teil 1: Verarbeitung der Antwort von GitHub (war bereits korrekt)
         if (window.opener) {
           window.opener.postMessage('authorization:github:success:' + JSON.stringify({
             token: fragment.split('=')[1].split('&')[0],
@@ -16,10 +17,17 @@
           }), document.location.origin);
         }
       } else if (search) {
+        // Teil 2: Weiterleitung zu GitHub (JETZT KORRIGIERT)
+        const params = new URLSearchParams(search);
+        // Entfernt den ungültigen 'provider'-Parameter, der den 404-Fehler verursacht.
+        params.delete('provider');
+        
+        const newSearch = params.toString();
         document.location.assign(
-          'https://github.com/login/oauth/authorize?' + search
+          'https://github.com/login/oauth/authorize?' + newSearch
         );
       } else {
+        // Teil 3: Initialer Start des Popups (war bereits korrekt)
         if (window.opener) {
           window.opener.postMessage('authorizing:github', document.location.origin);
         }
