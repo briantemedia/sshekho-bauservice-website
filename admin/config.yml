@@ -2,7 +2,7 @@ backend:
   name: github
   repo: briantemedia/sshekho-bauservice-website
   branch: main
-
+  site_id: 13ae65bc-cd21-47ea-9482-becf901f9f08
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
