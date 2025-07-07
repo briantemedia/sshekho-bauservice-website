@@ -1,40 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Decap CMS OAuth Redirect</title>
-  <script>
-    (function() {
-      const fragment = (document.location.hash || '').replace(/^#/, '');
-      const search = (document.location.search || '').replace(/^\?/, '');
-
-      if (fragment) {
-        // Teil 1: Verarbeitung der Antwort von GitHub (war bereits korrekt)
-        if (window.opener) {
-          window.opener.postMessage('authorization:github:success:' + JSON.stringify({
-            token: fragment.split('=')[1].split('&')[0],
-            provider: 'github'
-          }), document.location.origin);
-        }
-      } else if (search) {
-        // Teil 2: Weiterleitung zu GitHub (JETZT KORRIGIERT)
-        const params = new URLSearchParams(search);
-        // Entfernt den ungültigen 'provider'-Parameter, der den 404-Fehler verursacht.
-        params.delete('provider');
-        
-        const newSearch = params.toString();
-        document.location.assign(
-          'https://github.com/login/oauth/authorize?' + newSearch
-        );
-      } else {
-        // Teil 3: Initialer Start des Popups (war bereits korrekt)
-        if (window.opener) {
-          window.opener.postMessage('authorizing:github', document.location.origin);
-        }
-      }
-    })();
-  </script>
+  <meta charset="utf-8" />
+  <title>OAuth Callback</title>
 </head>
 <body>
+  <script>
+    // OAuth callback handler
+    (function() {
+      function receiveMessage(e) {
+        console.log("receiveMessage", e);
+        if (e.origin !== "https://shekho-bauservice.de") return;
+        
+        if (e.data.indexOf("authorization:github:success:") === 0) {
+          var data = JSON.parse(e.data.match(/:([^:]+)$/)[1]);
+          window.opener.postMessage(
+            "authorization:github:success:" + JSON.stringify(data),
+            e.origin
+          );
+          window.close();
+        }
+      }
+      window.addEventListener("message", receiveMessage, false);
+      window.opener.postMessage("authorizing:github", "*");
+    })();
+  </script>
 </body>
 </html>
