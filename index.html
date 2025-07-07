@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBS Shekho Bauservice GmbH - Ihr Partner für Bauprojekte</title>
+    <meta name="description" content="SBS Shekho Bauservice GmbH - Ihr Experte für Tiefbau, Gala Bau und Trockenbau. Spezialisiert auf Erdarbeiten, Erdbewegungen und Glasfasernetzausbau.">
+    <meta name="theme-color" content="#0f172a">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="home-page" class="bg-slate-50">
+
+    <header class="main-header">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center page-link">
+                         <img src="images/Outlook-lok4vh1a.png" alt="SBS Bauservice Logo" class="h-12 w-auto">
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-2">
+                    <a href="index.html" class="main-nav-link active text-white px-4 py-2 rounded-md text-sm font-medium page-link">Startseite</a>
+                    <a href="ueber-uns.html" class="main-nav-link text-white px-4 py-2 rounded-md text-sm font-medium page-link">Über Uns</a>
+                    <a href="leistungen.html" class="main-nav-link text-white px-4 py-2 rounded-md text-sm font-medium page-link">Leistungen</a>
+                    <a href="projekte.html" class="main-nav-link text-white px-4 py-2 rounded-md text-sm font-medium page-link">Projekte</a>
+                    <a href="kontakt.html" class="main-nav-link text-white px-4 py-2 rounded-md text-sm font-medium page-link">Kontakt</a>
+                    <a href="#" class="main-nav-link text-white px-3 py-2 rounded-md hover:text-yellow-400" aria-label="Facebook">
+                        <i data-lucide="facebook" class="h-5 w-5"></i>
+                    </a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="focus:outline-none p-2 text-white">
+                        <i data-lucide="menu" class="h-7 w-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-950/95 z-[60] flex flex-col items-center justify-center text-center backdrop-blur-lg">
+        <button id="mobile-menu-close-button" class="absolute top-7 right-6 text-slate-300 hover:text-yellow-400 focus:outline-none p-2 z-[70]">
+            <i data-lucide="x" class="h-9 w-9"></i>
+        </button>
+        <nav class="flex flex-col space-y-6">
+             <a href="index.html" class="text-3xl font-bold text-yellow-400 page-link">Startseite</a>
+             <a href="ueber-uns.html" class="text-3xl font-bold text-slate-200 hover:text-yellow-400 page-link">Über Uns</a>
+             <a href="leistungen.html" class="text-3xl font-bold text-slate-200 hover:text-yellow-400 page-link">Leistungen</a>
+             <a href="projekte.html" class="text-3xl font-bold text-slate-200 hover:text-yellow-400 page-link">Projekte</a>
+             <a href="kontakt.html" class="text-3xl font-bold text-slate-200 hover:text-yellow-400 page-link">Kontakt</a>
+        </nav>
+    </div>
+
+    <main>
+        <section id="home" class="hero-section relative min-h-screen flex items-center">
+            <div id="hero-bg-1" class="ken-burns-background" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'); opacity: 1;"></div>
+            <div id="hero-bg-2" class="ken-burns-background" style="opacity: 0;"></div>
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            <div class="relative z-10 container mx-auto px-4">
+                <div class="max-w-3xl hero-content">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tight mb-4 text-left text-white leading-tight">
+                        Ihr Experte für<br>
+                        <span class="highlight">umfassende</span><br>
+                        Baulösungen
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-200 text-left mb-8">
+                        Von Gala Bau bis Glasfaserausbau – Qualität und Zuverlässigkeit aus einer Hand.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="leistungen.html" class="bg-yellow-400 text-slate-900 font-bold py-4 px-8 rounded-lg text-lg hover:bg-yellow-300 transition-colors duration-300 inline-block page-link">
+                            Unsere Leistungen
+                        </a>
+                        <a href="projekte.html" class="border border-yellow-400 text-yellow-400 font-bold py-4 px-8 rounded-lg text-lg hover:bg-yellow-400 hover:text-slate-900 transition-colors duration-300 inline-block page-link">
+                            Projekte ansehen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-900 overflow-hidden pt-20 pb-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="section-title">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Unsere Kernkompetenzen</h2>
+                    <p class="text-slate-400 mb-16 max-w-2xl mx-auto">Wir sind Ihr vielseitiger Partner für Tiefbau, Gala Bau und Trockenbau.</p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 competency-cards-wrapper">
+                    <div class="w-full md:w-1/4">
+                        <div class="competency-card glow-card p-6 rounded-lg shadow-lg h-full flex flex-col justify-center">
+                            <i data-lucide="trees" class="mx-auto mb-4 h-16 w-16 text-amber-500"></i>
+                            <h3 class="text-xl font-semibold mb-2 text-white">Gala Bau</h3>
+                            <p class="text-sm mb-4">Kreative Gestaltung Ihrer Außenanlagen.</p>
+                            <a href="leistungen.html" class="text-amber-400 hover:text-amber-500 font-semibold mt-auto page-link">Mehr erfahren &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/5 my-4 md:my-0">
+                         <div class="competency-card main glow-card p-8 rounded-lg shadow-lg h-full flex flex-col justify-center">
+                            <i data-lucide="shovel" class="mx-auto mb-6 h-24 w-24 text-amber-500"></i>
+                            <h3 class="text-2xl font-bold mb-2 text-white">Tiefbau & Erdarbeiten</h3>
+                            <p class="text-base mb-4">Unsere Kernkompetenz für solide Fundamente und große Projekte.</p>
+                            <a href="leistungen.html" class="text-amber-400 hover:text-amber-500 font-semibold mt-auto text-lg page-link">Mehr erfahren &rarr;</a>
+                        </div>
+                    </div>
+                     <div class="w-full md:w-1/4">
+                        <div class="competency-card glow-card p-6 rounded-lg shadow-lg h-full flex flex-col justify-center">
+                            <i data-lucide="construction" class="mx-auto mb-4 h-16 w-16 text-amber-500"></i>
+                            <h3 class="text-xl font-semibold mb-2 text-white">Trockenbau</h3>
+                            <p class="text-sm mb-4">Flexibler Innenausbau für moderne Raumkonzepte.</p>
+                            <a href="leistungen.html" class="text-amber-400 hover:text-amber-500 font-semibold mt-auto page-link">Mehr erfahren &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="why-us" class="py-16 md:py-24 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto section-title">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4 text-slate-900">Was uns <span class="highlight">auszeichnet</span></h2>
+                    <p class="text-lg text-slate-600 mb-12">Wir verbinden Handwerkskunst mit modernster Technik und einem klaren Fokus auf Ihre Zufriedenheit.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto usp-cards">
+                    <div class="bg-white p-6 rounded-lg text-center border border-slate-200 shadow-sm">
+                        <i data-lucide="user-check" class="h-10 w-10 mx-auto mb-4 text-amber-500"></i>
+                        <h3 class="text-xl font-bold mb-2">Ein Ansprechpartner</h3>
+                        <p class="text-slate-600 text-sm">Von der Planung bis zur Fertigstellung steht Ihnen ein fester Experte zur Seite.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg text-center border border-slate-200 shadow-sm">
+                        <i data-lucide="shield-check" class="h-10 w-10 mx-auto mb-4 text-amber-500"></i>
+                        <h3 class="text-xl font-bold mb-2">Zertifizierte Qualität</h3>
+                        <p class="text-slate-600 text-sm">Wir arbeiten nach höchsten Standards und verwenden nur hochwertige, langlebige Materialien.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg text-center border border-slate-200 shadow-sm">
+                        <i data-lucide="clock" class="h-10 w-10 mx-auto mb-4 text-amber-500"></i>
+                        <h3 class="text-xl font-bold mb-2">Garantierte Termintreue</h3>
+                        <p class="text-slate-600 text-sm">Wir planen realistisch und halten uns an vereinbarte Zeitpläne – darauf können Sie sich verlassen.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg text-center border border-slate-200 shadow-sm">
+                        <i data-lucide="message-circle" class="h-10 w-10 mx-auto mb-4 text-amber-500"></i>
+                        <h3 class="text-xl font-bold mb-2">Faire Beratung</h3>
+                        <p class="text-slate-600 text-sm">Wir nehmen uns Zeit, Ihr Projekt unverbindlich und detailliert mit Ihnen zu besprechen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 bg-slate-800 text-white overflow-hidden"> 
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="section-title">
+                     <h2 class="text-3xl font-bold mb-12 text-center">Über Uns: Ihr <span class="highlight">starker Partner</span> am Bau</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="rounded-lg shadow-xl overflow-hidden h-96 about-image">
+                         <img src="images/Startseite/team-sbs-bauservice-pflasterarbeiten-rhein-main-01.webp" alt="Team von SBS Bauservice bei präzisen Pflasterarbeiten im Rhein-Main-Gebiet" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+                    <div class="about-text">
+                        <h3 class="text-2xl font-semibold mb-4 text-amber-400">Unsere Geschichte und Philosophie</h3>
+                        <p class="text-slate-300 mb-4">
+                            Die SBS Shekho Bauservice GmbH wurde mit der Vision gegründet, hochwertige Baudienstleistungen anzubieten, die auf Vertrauen, Fachkompetenz und Innovation basieren.
+                        </p>
+                        <p class="text-slate-300 mb-6">
+                            Unsere Philosophie ist einfach: Wir hören zu, planen sorgfältig und setzen präzise um.
+                        </p>
+                        <a href="ueber-uns.html" class="text-amber-400 font-bold hover:underline page-link">Mehr über uns &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="py-16 md:py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto section-title">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4 text-slate-900">Von der Vision zur <span class="highlight">Realität</span></h2>
+                    <p class="text-lg text-slate-600 mb-16 md:mb-24">Unser bewährter Prozess sorgt für einen reibungslosen Ablauf und erstklassige Ergebnisse.</p>
+                </div>
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-y-16 md:gap-x-8">
+                        
+                        <div class="process-step flex flex-col items-center text-center">
+                            <div class="connector connector-v md:hidden"></div>
+                            <div class="process-photo-wrapper">
+                                <img src="images/Startseite/beratung-planung-konzeption-sbs-bauservice-rhein-main-04.webp" alt="Symbolbild für Beratung und Vision bei SBS Bauservice" class="process-image absolute inset-0 w-full h-full object-cover rounded-2xl" loading="lazy" decoding="async">
+                                <div class="process-gradient-overlay"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i data-lucide="lightbulb" class="h-16 w-16 text-white/90 drop-shadow-lg"></i>
+                                </div>
+                            </div>
+                            <h3 class="process-heading text-xl font-bold text-slate-800 mb-2">1. Beratung & Vision</h3>
+                            <p class="text-slate-600 px-4">Wir hören Ihnen zu, um Ihre Wünsche, Ziele und die Gegebenheiten vor Ort genau zu verstehen.</p>
+                            <div class="connector connector-h hidden md:block"></div>
+                        </div>
+
+                        <div class="process-step flex flex-col items-center text-center">
+                            <div class="connector connector-v md:hidden"></div>
+                            <div class="process-photo-wrapper">
+                                <img src="images/Startseite/bauplanung-sicherheit-beratung-sbs-rhein-main-02.webp" alt="Bauhelm und Planungsunterlagen symbolisieren die sorgfältige Planung bei SBS Bauservice" class="process-image absolute inset-0 w-full h-full object-cover rounded-2xl" loading="lazy" decoding="async">
+                                <div class="process-gradient-overlay"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i data-lucide="file-text" class="h-16 w-16 text-white/90 drop-shadow-lg"></i>
+                                </div>
+                            </div>
+                            <h3 class="process-heading text-xl font-bold text-slate-800 mb-2">2. Planung & Angebot</h3>
+                            <p class="text-slate-600 px-4">Wir entwickeln einen klaren Plan und erstellen ein transparentes, faires Angebot ohne versteckte Kosten.</p>
+                            <div class="connector connector-h hidden md:block"></div>
+                        </div>
+
+                        <div class="process-step flex flex-col items-center text-center">
+                             <div class="connector connector-v md:hidden"></div>
+                            <div class="process-photo-wrapper">
+                                <img src="images/Startseite/pflasterarbeiten-handwerk-wegebau-sbs-rhein-main-03.webp" alt="Professionelle Umsetzung von Pflasterarbeiten durch das SBS Team" class="process-image absolute inset-0 w-full h-full object-cover rounded-2xl" loading="lazy" decoding="async">
+                                <div class="process-gradient-overlay"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i data-lucide="construction" class="h-16 w-16 text-white/90 drop-shadow-lg"></i>
+                                </div>
+                            </div>
+                            <h3 class="process-heading text-xl font-bold text-slate-800 mb-2">3. Professionelle Umsetzung</h3>
+                            <p class="text-slate-600 px-4">Unser erfahrenes Team setzt Ihr Projekt mit höchster Präzision und termingerecht um.</p>
+                            <div class="connector connector-h hidden md:block"></div>
+                        </div>
+
+                        <div class="process-step flex flex-col items-center text-center">
+                            <div class="process-photo-wrapper">
+                                <img src="images/Startseite/partnerschaft-zuverlässigkeit-handschlag-sbs-rhein-main-05.webp" alt="Händedruck als Symbol für die erfolgreiche Abnahme und Übergabe eines Projekts" class="process-image absolute inset-0 w-full h-full object-cover rounded-2xl" loading="lazy" decoding="async">
+                                <div class="process-gradient-overlay"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i data-lucide="key" class="h-16 w-16 text-white/90 drop-shadow-lg"></i>
+                                </div>
+                            </div>
+                            <h3 class="process-heading text-xl font-bold text-slate-800 mb-2">4. Abnahme & Übergabe</h3>
+                            <p class="text-slate-600 px-4">Wir sind erst zufrieden, wenn Sie es sind. Gemeinsam nehmen wir das Projekt ab und übergeben es.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services" class="py-24 bg-white text-slate-800 overflow-hidden">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                    <div class="services-col-1">
+                        <h2 class="text-3xl md:text-4xl font-black mb-4">Vision, die <span class="highlight">Form annimmt.</span></h2>
+                        <p class="text-slate-600 mb-8 max-w-lg">Vom ersten Spatenstich bis zum letzten Detail – wir verwandeln Ideen in beständige Realität. Unsere Expertise erstreckt sich über alle Phasen des Bauprozesses und garantiert Ergebnisse, die nicht nur heute überzeugen, sondern auch morgen Bestand haben.</p>
+                        <div class="rounded-lg shadow-xl overflow-hidden mt-8 aspect-w-16 aspect-h-9">
+                            <img src="images/Startseite/pflasterarbeiten-praezision-detail-sbs-rhein-main-06.webp" alt="Detailaufnahme von präzise verlegten Pflastersteinen als Beweis für Handwerkskunst" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="services-col-2">
+                         <div class="rounded-lg shadow-lg overflow-hidden aspect-w-16 aspect-h-9 mb-8">
+                            <img src="images/Startseite/bauunternehmen-sbs-bauservice-baumaschinen-rhein-main-02.webp" alt="Baustelle mit Minibagger von SBS Bauservice im Rhein-Main-Gebiet" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                         </div>
+                        <div class="bg-slate-50 border border-slate-200 rounded-lg p-6">
+                            <div class="service-accordion-item">
+                                <div class="service-accordion-question flex justify-between items-center cursor-pointer">
+                                    <h3 class="text-xl font-bold">Welche Arten von Bauprojekten führen Sie durch?</h3>
+                                    <i data-lucide="plus" class="accordion-icon h-6 w-6 text-amber-500 transition-transform flex-shrink-0"></i>
+                                </div>
+                                <div class="service-accordion-answer"><p class="pt-2 text-slate-600">Wir sind auf Tiefbau, Galabau und Trockenbau spezialisiert. Das umfasst alles von Erdarbeiten für große Gewerbeprojekte bis hin zur detailreichen Gestaltung von Privatgärten.</p></div>
+                            </div>
+                             <div class="border-t border-slate-200 my-4"></div>
+                             <div class="service-accordion-item">
+                                <div class="service-accordion-question flex justify-between items-center cursor-pointer">
+                                    <h3 class="text-xl font-bold">Wie stellen Sie die Qualität Ihrer Arbeit sicher?</h3>
+                                    <i data-lucide="plus" class="accordion-icon h-6 w-6 text-amber-500 transition-transform flex-shrink-0"></i>
+                                </div>
+                                <div class="service-accordion-answer"><p class="pt-2 text-slate-600">Qualität ist unser oberstes Gebot. Wir setzen auf erfahrene Fachkräfte, hochwertige Materialien und eine sorgfältige Planung und Überwachung jeder Projektphase.</p></div>
+                            </div>
+                        </div>
+                         <a href="leistungen.html" class="mt-8 bg-amber-500 text-slate-900 font-bold py-3 px-6 rounded-lg text-lg hover:bg-amber-600 transition-colors duration-300 inline-block page-link">
+                            Alle Leistungen entdecken
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-16 bg-slate-900 overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="section-title">
+                    <h2 class="text-3xl font-bold mb-12 text-center text-white">Unsere Referenzprojekte</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="project-card glow-card rounded-lg shadow-lg overflow-hidden">
+                        <div class="h-56 overflow-hidden"><img src="images/Startseite/galabau-moderne-gartengestaltung-sbs-rhein-main-04.webp" alt="Neugestaltung einer modernen Gartenanlage durch SBS Bauservice" class="project-card-image w-full h-full object-cover" loading="lazy" decoding="async"></div>
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">Neugestaltung Gartenanlage</h3><p class="text-sm text-amber-400 mb-1">Gala Bau</p></div>
+                    </div>
+                    <div class="project-card glow-card rounded-lg shadow-lg overflow-hidden">
+                         <div class="h-56 overflow-hidden"><img src="images/Startseite/tiefbau-erdbau-baggerarbeiten-sbs-rhein-main-01.webp" alt="Baugrubenaushub für eine Industriehalle durch einen Minibagger" class="project-card-image w-full h-full object-cover" loading="lazy" decoding="async"></div>
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">Baugrubenaushub</h3><p class="text-sm text-amber-400 mb-1">Tiefbau</p></div>
+                    </div>
+                     <div class="project-card glow-card rounded-lg shadow-lg overflow-hidden">
+                         <div class="h-56 overflow-hidden"><img src="images/Startseite/trockenbau-innenausbau-rohbau-sbs-rhein-main-02.webp" alt="Innenausbau eines modernen Bürokomplexes mit Trockenbau" class="project-card-image w-full h-full object-cover" loading="lazy" decoding="async"></div>
+                        <div class="p-6"><h3 class="text-xl font-semibold mb-2">Innenausbau Bürokomplex</h3><p class="text-sm text-amber-400 mb-1">Trockenbau</p></div>
+                    </div>
+                </div>
+                 <div class="text-center mt-12 projects-button">
+                    <a href="projekte.html" class="bg-yellow-400 text-slate-900 font-bold py-3 px-6 rounded-lg hover:bg-yellow-300 transition-colors duration-300 inline-block page-link">
+                        Alle Projekte ansehen
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="relative bg-slate-900 text-slate-300 py-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img id="footer-bg-image" src="https://images.unsplash.com/photo-1597974380476-fbf652dfe188?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hintergrundbild Baustelle bei Nacht" class="w-full h-full object-cover opacity-10" loading="lazy" decoding="async">
+            <div class="absolute inset-0 bg-slate-900/80"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left footer-content">
+                <div class="flex flex-col items-center md:items-start footer-col">
+                    <img src="images/sbs-bauservice-logo.svg" alt="SBS Bauservice Logo" class="h-10 w-auto mb-4" style="filter: brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(600%) hue-rotate(350deg);">
+                    <p class="text-sm text-slate-400 max-w-xs">
+                        Ihr zuverlässiger Partner für Tiefbau, Trockenbau und Galabau im Raum Würzburg und darüber hinaus.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-slate-400 hover:text-yellow-400"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-yellow-400"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-yellow-400"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="font-bold text-white mb-4 uppercase tracking-wider">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-yellow-400 transition-colors page-link">Startseite</a></li>
+                        <li><a href="ueber-uns.html" class="hover:text-yellow-400 transition-colors page-link">Über Uns</a></li>
+                        <li><a href="leistungen.html" class="hover:text-yellow-400 transition-colors page-link">Leistungen</a></li>
+                        <li><a href="projekte.html" class="hover:text-yellow-400 transition-colors page-link">Projekte</a></li>
+                        <li><a href="kontakt.html" class="hover:text-yellow-400 transition-colors page-link">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="font-bold text-white mb-4 uppercase tracking-wider">Rechtliches</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="impressum-link hover:text-yellow-400 transition-colors">Impressum</a></li>
+                        <li><a href="#" class="datenschutz-link hover:text-yellow-400 transition-colors">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="font-bold text-white mb-4 uppercase tracking-wider">Kontakt</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center justify-center md:justify-start">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-3 text-yellow-400"></i>
+                            Musterstraße 123, 97070 Würzburg
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start">
+                            <i data-lucide="phone" class="w-4 h-4 mr-3 text-yellow-400"></i>
+                            +49 123 456 7890
+                        </li>
+                         <li class="flex items-center justify-center md:justify-start">
+                            <i data-lucide="mail" class="w-4 h-4 mr-3 text-yellow-400"></i>
+                            info@sbs-bauservice.de
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-slate-700 pt-8 text-center text-sm text-slate-500">
+                <p>&copy; <span id="currentYear"></span> SBS Shekho Bauservice GmbH. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="impressum-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-[60]">
+        <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto text-gray-800">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Impressum</h2>
+                <button class="close-modal-btn text-gray-500 hover:text-gray-700 text-3xl leading-none">&times;</button>
+            </div>
+            <p><strong>Angaben gemäß § 5 TMG:</strong><br><br>SBS Shekho Bauservice GmbH<br>Musterstraße 123<br>97070 Würzburg<br><br><strong>Vertreten durch:</strong><br>Herr [Vorname Nachname Geschäftsführer] (Platzhalter)<br><br><strong>Kontakt:</strong><br>Telefon: +49 123 4567890 (Platzhalter)<br>E-Mail: info@sbs-bauservice.de (Platzhalter)<br><br><em>Bitte füllen Sie diese Angaben mit Ihren korrekten Unternehmensdaten aus. Dies ist nur ein Platzhalter.</em></p>
+        </div>
+    </div>
+    <div id="datenschutz-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-[60]">
+        <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto text-gray-800">
+             <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Datenschutzerklärung</h2>
+                <button class="close-modal-btn text-gray-500 hover:text-gray-700 text-3xl leading-none">&times;</button>
+            </div>
+            <p>Hier steht Ihre ausführliche Datenschutzerklärung gemäß DSGVO.<br><br><em>Dies ist nur ein Platzhalter. Eine individuelle, rechtskonforme Datenschutzerklärung ist unerlässlich.</em></p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

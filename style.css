@@ -1,0 +1,533 @@
+/* General Body and HTML styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Default light background */
+    color: #0f172a; /* Default dark text */
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+    overflow-x: hidden;
+}
+
+body.is-leaving {
+    opacity: 0;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Dark theme body styles for specific pages */
+body.dark-theme {
+    background-color: #0f172a; /* slate-900 */
+    color: #f8fafc; /* slate-50 */
+}
+
+/* Utility and Highlight classes */
+.highlight {
+    color: #f59e0b; /* amber-500 */
+}
+
+/* Header and Navigation styles */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: transparent;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.main-header.header-hidden {
+    transform: translateY(-100%);
+}
+
+.main-header.header-scrolled,
+.main-header.dark-header { /* For pages with a dark theme from the start */
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.main-nav-link {
+    transition: all 0.3s ease-in-out;
+    color: #334155; /* Default link color for light header */
+    font-weight: 600;
+}
+
+.main-nav-link:hover {
+    color: #f59e0b;
+}
+
+.main-nav-link.active {
+    background-color: #f59e0b;
+    color: #1e293b;
+}
+
+.header-scrolled .main-nav-link,
+.dark-header .main-nav-link {
+    color: #e2e8f0;
+}
+
+.header-scrolled .main-nav-link:hover,
+.dark-header .main-nav-link:hover {
+    color: #f59e0b;
+}
+
+.header-scrolled .main-nav-link.active,
+.dark-header .main-nav-link.active {
+    background-color: #f59e0b;
+    color: #1e293b;
+}
+
+#mobile-menu {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Hero and Background Image Styles */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.ken-burns-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    animation: grow 30s linear infinite alternate;
+    transition: opacity 1.5s ease-in-out;
+}
+
+@keyframes grow {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.15); }
+}
+
+#background-image-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 70vh;
+    max-height: 800px;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    filter: brightness(0.7);
+    border-bottom-left-radius: 1.5rem;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+/* Card Styles */
+
+/* Base Project Card Style */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+.project-card:hover {
+    transform: translateY(-8px);
+}
+.project-card-image {
+    transition: transform 0.3s ease;
+}
+.project-card:hover .project-card-image {
+    transform: scale(1.05);
+}
+
+/* Detailed Project Card for Projekte Page */
+.project-card-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.project-card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.project-card-image-wrapper .project-card-image {
+     transition: transform 0.4s ease-out;
+}
+.project-card-container:hover .project-card-image {
+    transform: scale(1.05);
+}
+.project-card-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.6);
+    transition: background-color 0.4s ease-out;
+}
+.project-card-container:hover .project-card-overlay {
+    background-color: rgba(15, 23, 42, 0.3);
+}
+.project-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    color: white;
+}
+.project-card-category {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.project-card-details {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-out 0.1s, transform 0.4s ease-out 0.1s;
+}
+.project-card-container:hover .project-card-details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Competency Card */
+.competency-card {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.competency-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.competency-card.main {
+    border: 2px solid #f59e0b;
+    transform: scale(1.05);
+}
+.competency-card.main:hover {
+    transform: scale(1.08);
+}
+
+/* Manifest Card */
+.manifest-card {
+    transition: transform 0.3s ease;
+}
+.manifest-card:hover {
+    transform: scale(1.05);
+}
+
+/* Glow Card Effect */
+.glow-card {
+    position: relative;
+    overflow: hidden;
+}
+.glow-card::before {
+    content: '';
+    position: absolute;
+    left: var(--mouse-x, 0px);
+    top: var(--mouse-y, 0px);
+    width: 250px; /* Default width */
+    height: 250px; /* Default height */
+    background: radial-gradient(circle at center, rgba(245, 158, 11, 0.25) 0%, transparent 80%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+.glow-card:hover::before {
+    opacity: 1;
+}
+/* Specific glow for Projekte page */
+.projekte-glow.glow-card::before {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle at center, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+}
+
+
+/* Accordion Styles */
+.service-accordion-item.active .service-accordion-answer {
+    max-height: 200px;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+.service-accordion-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding-top 0.5s ease-in-out, padding-bottom 0.5s ease-in-out;
+}
+.accordion-icon {
+    transition: transform 0.3s ease-in-out;
+}
+.service-accordion-item.active .accordion-icon {
+    transform: rotate(135deg);
+}
+
+/* FAQ Accordion */
+.faq-question {
+    cursor: pointer;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-top: 1rem;
+}
+.faq-arrow {
+    transition: transform 0.3s ease-in-out;
+}
+.faq-item.active .faq-arrow {
+    transform: rotate(180deg);
+}
+
+/* Process Steps Styles */
+.process-step {
+    position: relative;
+}
+.process-photo-wrapper {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    border-radius: 1rem;
+    border-width: 2px;
+    border-color: #fbbf24;
+}
+.process-gradient-overlay {
+    position: absolute;
+    inset: 0px;
+    background-image: linear-gradient(to top, rgba(245, 158, 11, 0.6), rgba(251, 191, 36, 0.1));
+    transition: opacity 0.3s ease-in-out;
+}
+.process-step:hover .process-gradient-overlay {
+    opacity: 0.9;
+}
+.process-photo-wrapper .process-image {
+     transition: filter 0.3s ease-in-out;
+}
+ .process-step:hover .process-photo-wrapper .process-image {
+     filter: brightness(1.1);
+ }
+.process-heading {
+    transition: color 0.3s ease-in-out;
+}
+.process-step:hover .process-heading {
+    color: #f59e0b;
+}
+.connector {
+    position: absolute;
+    background-color: #fcd34d;
+    z-index: -1;
+}
+.connector-h {
+    top: 96px;
+    left: 50%;
+    width: 100%;
+    height: 3px;
+}
+ .connector-v {
+    top: 96px;
+    left: calc(50% - 1.5px);
+    width: 3px;
+    height: 100%;
+}
+
+
+/* Filter Buttons (Projekte Page) */
+.filter-btn {
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #475569;
+    color: #cbd5e1;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.filter-btn:hover {
+    border-color: #f59e0b;
+    color: #f59e0b;
+}
+.filter-btn.active {
+    background-color: #f59e0b;
+    color: #1e293b;
+    border-color: #f59e0b;
+}
+
+/* Modal Styles */
+#project-modal {
+    transition: opacity 0.3s ease-in-out;
+}
+#project-modal-content {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* "Über Uns" Page Specific Styles */
+.blueprint-bg {
+    background-color: #1e293b;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+}
+.founder-image-panel, .founder-text-panel {
+    transition: background-color 0.3s ease;
+}
+
+/* "Kontakt" Page Specific Styles */
+.survey-option {
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease-in-out;
+}
+.survey-option:hover {
+    border-color: #f59e0b;
+    transform: translateY(-4px);
+    background-color: #fefce8;
+}
+.survey-option.active {
+    border-color: #f59e0b;
+    background-color: #fefce8;
+    box-shadow: 0 4px 14px 0 rgba(245, 158, 11, 0.2);
+    pointer-events: none;
+}
+.survey-option.active .icon-wrapper {
+    background-color: #f59e0b;
+    color: #1e293b;
+}
+.survey-step {
+    display: none;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+}
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-input:focus {
+    outline: none;
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+#contact-form-wrapper {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+
+/* "Leistungen" Page Specific Styles */
+.sticky-nav {
+    z-index: 20;
+}
+.nav-link.active { /* Specific for Leistungen page nav */
+    background-color: #f59e0b;
+    color: #1e293b;
+}
+
+/* Portfolio Slider (Leistungen Page) */
+/* Find and replace these rules in your style.css */
+
+#portfolio-slider {
+    overflow: hidden; /* Hides the slides that are off-screen */
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animation for the slide */
+}
+
+.portfolio-slide {
+    width: 100%;
+    flex-shrink: 0; /* Prevents slides from shrinking */
+    box-sizing: border-box;
+    padding: 0 1rem; /* Optional: adds some space between slides */
+}
+
+.portfolio-card {
+    aspect-ratio: 16 / 9;
+    position: relative;
+    border-radius: 1rem;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform;
+    display: flex;
+    align-items: flex-end; /* Aligns content to the bottom */
+}
+
+.portfolio-card__image {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 1rem; /* Add this line */
+}
+.portfolio-card:hover .portfolio-card__image {
+    transform: scale(1.1);
+}
+.portfolio-card__content {
+    position: relative; /* Changed from absolute */
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+    color: #f8fafc;
+    z-index: 2; /* Ensures content is above the image */
+}
+.portfolio-card__content h3, .portfolio-card__content p {
+     color: #f8fafc;
+}
+ .portfolio-card__content .tag {
+    background-color: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Service Section Card Hover (Leistungen Page) */
+.service-section-card {
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.service-section-card:hover {
+    transform: scale(1.02);
+    border-color: #f59e0b;
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.2);
+}
+
+/* Custom Focus Styles for Accessibility */
+*:focus-visible {
+    outline: 3px solid #f59e0b; /* Uses your orange highlight color */
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .process-step > .process-heading, .process-step > p {
+        position: relative;
+        background-color: #f8fafc; /* body background color */
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere Leistungen - SBS Shekho Bauservice GmbH</title>
+    <meta name="description" content="Entdecken Sie unsere umfassenden Leistungen in den Bereichen Tiefbau, Gala Bau und Trockenbau. Qualität und Zuverlässigkeit für Ihr Projekt in Würzburg und Umgebung.">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link href="/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="leistungen-page" class="bg-slate-900 text-slate-50 dark-theme">
+
+    <div id="background-image-container" style="background-image: url('images/leistungen/pflasterarbeiten-handwerk-wegebau-sbs-rhein-main-03.webp');"></div>
+
+    <div class="content-wrapper">
+        <header class="main-header dark-header">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="flex items-center page-link">
+                            <img src="images/Outlook-lok4vh1a.png" alt="SBS Bauservice Logo" class="h-12 w-auto">
+                        </a>
+                    </div>
+                    <nav class="hidden md:flex items-center space-x-2">
+                        <a href="index.html" class="main-nav-link text-slate-300 hover:text-white px-4 py-2 rounded-md text-sm font-medium page-link">Startseite</a>
+                        <a href="ueber-uns.html" class="main-nav-link text-slate-300 hover:text-white px-4 py-2 rounded-md text-sm font-medium page-link">Über Uns</a>
+                        <a href="leistungen.html" class="main-nav-link active px-4 py-2 rounded-md text-sm font-bold page-link">Leistungen</a>
+                        <a href="projekte.html" class="main-nav-link text-slate-300 hover:text-white px-4 py-2 rounded-md text-sm font-medium page-link">Projekte</a>
+                        <a href="kontakt.html" class="main-nav-link text-slate-300 hover:text-white px-4 py-2 rounded-md text-sm font-medium page-link">Kontakt</a>
+                        <a href="#" class="main-nav-link text-white px-3 py-2 rounded-md hover:text-yellow-400" aria-label="Facebook">
+                            <i data-lucide="facebook" class="h-5 w-5"></i>
+                        </a>
+                    </nav>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="focus:outline-none p-2 text-white">
+                            <i data-lucide="menu" class="h-7 w-7"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-950/95 z-[60] flex flex-col items-center justify-center text-center backdrop-blur-lg">
+            <button id="mobile-menu-close-button" class="absolute top-7 right-6 text-slate-300 hover:text-yellow-400 focus:outline-none p-2 z-[70]">
+                <i data-lucide="x" class="h-9 w-9"></i>
+            </button>
+            <nav class="flex flex-col space-y-6">
+                 <a href="index.html" class="text-3xl font-bold text-slate-200 hover:text-yellow-400 page-link">Startseite</a>
+                 <a href="ueber-uns.html" class="text-3xl font-bold text-slate-200 hover:text-yellow-400 page-link">Über Uns</a>
+                 <a href="leistungen.html" class="text-3xl font-bold text-yellow-400 page-link">Leistungen</a>
+                 <a href="projekte.html" class="text-3xl font-bold text-slate-200 hover:text-yellow-400 page-link">Projekte</a>
+                 <a href="kontakt.html" class="text-3xl font-bold text-slate-200 hover:text-yellow-400 page-link">Kontakt</a>
+            </nav>
+        </div>
+
+        <div class="relative min-h-[70vh] flex items-center pt-20">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl hero-content">
+                    <h1 class="text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter mb-4 text-left">
+                        Unsere <span class="highlight">Leistungen</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-200 text-left">
+                        Von der soliden Basis bis zur grünen Oase – entdecken Sie die Vielfalt unserer professionellen Bauleistungen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container mx-auto px-4 py-12 md:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
+                <aside class="lg:col-span-1 lg:sticky lg:top-28 h-max sticky-nav">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h3 class="font-bold text-2xl mb-2 text-white">Leistungsbereiche</h3>
+                        <p class="text-slate-400 mb-6">Klicken Sie auf einen Bereich, um direkt zur Beschreibung zu springen.</p>
+                        <nav id="service-nav">
+                            <ul class="space-y-3">
+                                <li><a href="#tiefbau" class="nav-link block font-bold p-4 rounded-lg text-slate-300 hover:bg-yellow-400 hover:text-slate-900">1. Tiefbau</a></li>
+                                <li><a href="#trockenbau" class="nav-link block font-bold p-4 rounded-lg text-slate-300 hover:bg-yellow-400 hover:text-slate-900">2. Trockenbau</a></li>
+                                <li><a href="#galabau" class="nav-link block font-bold p-4 rounded-lg text-slate-300 hover:bg-yellow-400 hover:text-slate-900">3. Galabau</a></li>
+                            </ul>
+                        </nav>
+                         <a href="kontakt.html" class="bg-yellow-400 text-slate-900 font-bold py-4 px-6 rounded-lg text-center block mt-8 hover:bg-yellow-300 transition-colors duration-300 page-link">
+                            Jetzt Projekt anfragen
+                        </a>
+                    </div>
+                </aside>
+                <main class="lg:col-span-2 space-y-16 mb-24">
+                    <section id="tiefbau" class="service-section-card min-h-[60vh] flex flex-col justify-center p-8 rounded-2xl border border-slate-700/50 bg-slate-800/40 backdrop-blur-sm">
+                        <div class="relative z-10 pt-12">
+                            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4">Bereich: <span class="highlight">Tiefbau</span></h2>
+                            <p class="max-w-xl text-lg mb-6 text-slate-300">Wir schaffen das stabile Fundament für Ihr Projekt – von professionellen Erdarbeiten über Kanalanschlüsse bis zum Wegebau.</p>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+
+        <div class="bg-white text-slate-900">
+            <section id="portfolio" class="py-16 md:py-24">
+                <div class="container mx-auto px-4">
+                    <div class="text-center max-w-3xl mx-auto section-title">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4">Projekte, die <span class="highlight">für sich sprechen</span></h2>
+                        <p class="text-lg text-slate-600 mb-12">Unsere Arbeit ist unsere beste Visitenkarte. Sehen Sie selbst, wie wir Qualität, Zuverlässigkeit und Präzision in jedem Detail umsetzen.</p>
+                    </div>
+
+                    <div id="portfolio-slider" class="relative max-w-4xl mx-auto" style="perspective: 1500px;">
+                        <div class="portfolio-slide active">
+                            <div class="portfolio-card glow-card shadow-2xl" data-project-id="1">
+                                <img src="images/leistungen/tiefbau-erdbau-baggerarbeiten-sbs-rhein-main-01.webp" alt="Bagger bei Erdarbeiten für ein Tiefbau-Projekt" class="portfolio-card__image">
+                                <div class="portfolio-card__content">
+                                    <h3 class="text-3xl font-bold mb-2">Gewerbehalle Würzburg</h3>
+                                    <p class="text-slate-200 mb-4 text-sm">Umfassende Erdarbeiten und Kanalanschlüsse für einen Neubau im Gewerbegebiet.</p>
+                                    <a href="#" class="portfolio-details-btn">Details &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-slide">
+                            <div class="portfolio-card glow-card shadow-2xl" data-project-id="2">
+                                <img src="images/leistungen/galabau-moderne-gartengestaltung-sbs-rhein-main-04.webp" alt="Moderne Gartengestaltung" class="portfolio-card__image">
+                                <div class="portfolio-card__content">
+                                    <h3 class="text-3xl font-bold mb-2">Gartenanlage Estenfeld</h3>
+                                    <p class="text-slate-200 mb-4 text-sm">Neugestaltung eines privaten Gartens mit Terrassenbau aus Naturstein.</p>
+                                    <a href="#" class="portfolio-details-btn">Details &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-slide">
+                            <div class="portfolio-card glow-card shadow-2xl" data-project-id="3">
+                                <img src="images/leistungen/innenausbau-entkernung-buero-sbs-rhein-main-07.webp" alt="Entkernter Büroraum während des Trockenbaus" class="portfolio-card__image">
+                                <div class="portfolio-card__content">
+                                    <h3 class="text-3xl font-bold mb-2">Innenausbau Kitzingen</h3>
+                                    <p class="text-slate-200 mb-4 text-sm">Kompletter Ausbau eines Dachstuhls zur Schaffung von neuem Wohnraum.</p>
+                                    <a href="#" class="portfolio-details-btn">Details &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex justify-center items-center gap-4">
+                            <button id="prev-slide" class="bg-white/50 p-3 rounded-full hover:bg-yellow-400 text-slate-800 hover:text-slate-900 transition-colors border border-slate-300"><i data-lucide="arrow-left" class="h-6 w-6"></i></button>
+                            <div id="slide-indicators" class="flex gap-2"></div>
+                            <button id="next-slide" class="bg-white/50 p-3 rounded-full hover:bg-yellow-400 text-slate-800 hover:text-slate-900 transition-colors border border-slate-300"><i data-lucide="arrow-right" class="h-6 w-6"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="project-modal" class="hidden opacity-0 fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4">
+        <div id="project-modal-content" class="bg-white text-slate-900 rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative transform scale-95">
+            <button id="modal-close-btn" class="absolute top-4 right-4 text-slate-500 hover:text-slate-800">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="p-8">
+                     <h2 id="modal-title" class="text-3xl font-black mb-2"></h2>
+                     <span id="modal-category" class="text-sm font-bold uppercase tracking-wider"></span>
+                     <div class="border-t border-slate-200 my-4"></div>
+                     <p id="modal-description" class="text-slate-600 mb-6"></p>
+                     <h4 class="font-bold text-lg mb-2">Durchgeführte Arbeiten</h4>
+                     <ul id="modal-tasks" class="space-y-2 text-slate-600"></ul>
+                </div>
+                <div class="p-8 bg-slate-100">
+                    <h4 class="font-bold text-lg mb-4">Projekt-Galerie</h4>
+                    <div id="modal-gallery" class="grid grid-cols-2 gap-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

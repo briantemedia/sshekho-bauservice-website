@@ -1,0 +1,82 @@
+backend:
+  name: github
+  repo: briantemedia/sshekho-bauservice-website
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # Projekte Collection
+  - name: "projekte"
+    label: "Projekte"
+    folder: "content/projekte"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Kategorie", name: "category", widget: "select", options: ["Tiefbau", "Galabau", "Trockenbau"]}
+      - {label: "Kurzbeschreibung", name: "short_description", widget: "text"}
+      - {label: "Beschreibung", name: "description", widget: "markdown"}
+      - {label: "Hauptbild", name: "featured_image", widget: "image"}
+      - {label: "Galerie", name: "gallery", widget: "list", field: {label: "Bild", name: "image", widget: "image"}}
+      - {label: "Aufgaben", name: "tasks", widget: "list", field: {label: "Aufgabe", name: "task", widget: "string"}}
+      - {label: "Reihenfolge", name: "order", widget: "number", default: 0}
+      - {label: "Veröffentlicht", name: "published", widget: "boolean", default: true}
+
+  # Leistungen Collection
+  - name: "leistungen"
+    label: "Leistungen"
+    folder: "content/leistungen"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Icon", name: "icon", widget: "string", hint: "Lucide icon name (z.B. 'shovel', 'trees', 'construction')"}
+      - {label: "Kurzbeschreibung", name: "short_description", widget: "text"}
+      - {label: "Beschreibung", name: "description", widget: "markdown"}
+      - {label: "Services", name: "services", widget: "list", field: {label: "Service", name: "service", widget: "string"}}
+      - {label: "Reihenfolge", name: "order", widget: "number", default: 0}
+
+  # Seiten
+  - name: "pages"
+    label: "Seiten"
+    files:
+      - name: "home"
+        label: "Startseite"
+        file: "content/pages/home.md"
+        fields:
+          - {label: "Hero Titel", name: "hero_title", widget: "string"}
+          - {label: "Hero Untertitel", name: "hero_subtitle", widget: "text"}
+          - {label: "Über Uns Text", name: "about_text", widget: "markdown"}
+      
+      - name: "ueber-uns"
+        label: "Über Uns"
+        file: "content/pages/ueber-uns.md"
+        fields:
+          - {label: "Seiten Titel", name: "page_title", widget: "string"}
+          - {label: "Seiten Beschreibung", name: "page_description", widget: "text"}
+          - {label: "Mission Titel", name: "mission_title", widget: "string"}
+          - {label: "Mission Text", name: "mission_text", widget: "markdown"}
+      
+      - name: "kontakt"
+        label: "Kontakt"
+        file: "content/pages/kontakt.md"
+        fields:
+          - {label: "Adresse", name: "address", widget: "string"}
+          - {label: "Telefon", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+
+  # Einstellungen
+  - name: "settings"
+    label: "Einstellungen"
+    files:
+      - name: "general"
+        label: "Allgemeine Einstellungen"
+        file: "content/settings/general.json"
+        fields:
+          - {label: "Firmenname", name: "company_name", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "image"}
+          - {label: "Adresse", name: "address", widget: "string"}
+          - {label: "Telefon", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
